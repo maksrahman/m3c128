@@ -39,9 +39,8 @@ public class RockPaperScissors {
                 }
                 System.out.println("\nDo you want to play again?");
                 String choice = scanner.next();
-                if (choice.equals("Yes")){
-                    play = true;
-                } else if (choice.equals("No")){
+
+                if (choice.equals("No")){
                     play = false;
                 } else {
                     System.out.println("Please select Yes or No");
