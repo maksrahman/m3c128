@@ -20,11 +20,10 @@ public class DVDLibraryController {
     public void run() {
         boolean keepGoing = true;
         int menuSelection;
+
         try {
             while (keepGoing) {
-
                 menuSelection = getMenuSelection();
-
                 switch (menuSelection) {
                     case 1 -> listDVDs();
                     case 2 -> createDVD();
@@ -33,14 +32,14 @@ public class DVDLibraryController {
                     case 5 -> removeDVD();
                     case 6 -> keepGoing = false;
                     default -> unknownCommand();
-                }
 
+                }
             }
             exitMessage();
+
         } catch (DVDLibraryDaoException e){
             view.displayErrorMessage(e.getMessage());
         }
-
     }
 
     private int getMenuSelection() {
